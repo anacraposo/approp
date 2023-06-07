@@ -1,0 +1,300 @@
+* {
+	margin: 0;
+	padding: 0%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+  overflow: hidden;
+}
+
+project::-webkit-scrollbar{
+  display: none;
+}
+
+quote::-webkit-scrollbar{
+  display: none;
+}
+
+.container{
+  display: grid;
+  height: 100vh;
+  background-color: white;
+  grid-template-columns: 33.8vw 47vw  19.2vw;
+  grid-template-rows:  2.3vw 4.8vw  42.3vh 8.3vh 42.3vh;
+  grid-template-areas:
+  "about about about" 
+  "termos termos termos"
+  "img1  project definition"
+  "img1 img2 quote"
+  "img1 img2 quote";
+}
+
+about{
+  grid-area: about;
+  border-bottom: solid;
+
+}
+
+    p {
+      color:black;
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      white-space: nowrap;
+      font-size: 1.2vw;
+      font-weight: 600;
+      line-break: none; 
+      }
+
+      h6{
+      color: black;
+      font-size: 0.5vw;
+      font-weight: 600;
+      line-break: none;
+      visibility: hidden;
+      }
+            
+
+termos{
+  grid-area: termos;
+  background-color: white;
+  font-family: 'DotGothic16', sans-serif;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 2.5vw;
+  font-weight: 900;
+  line-break: none; 
+  border-bottom: solid;
+  overflow: hidden;
+}
+
+
+.marqueetermos{
+  animation: marquee 17s linear infinite;
+  position: absolute;
+  line-break: none;
+  white-space: nowrap;
+}
+
+
+@keyframes marquee {
+  100% {
+    transform: translateX(-292vh);
+  }
+
+}
+
+.marqueetermos:hover {
+  animation-play-state: paused;
+}
+
+
+definition{
+  background-color: white;
+  grid-area: definition;
+  position: relative;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  overflow: hidden;
+  z-index: 10;
+}
+
+h1{
+  position: absolute;
+  height: auto;
+  background-color:white;
+  padding-left: 0.3vw;
+  font-family: 'DotGothic16', sans-serif;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom-style: solid;
+  border-right-style: solid;
+  z-index: 999;
+}
+
+h2{
+  color: black;
+  transform: none;
+  text-align: center;
+  padding-top: 4.5vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  font-size: 1vw;
+  font-weight: 500; 
+}
+
+h3{
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1vw 1vw 1vw 1vw;
+  font-family:  'DotGothic16', sans-serif;
+  text-align: left;
+  font-weight: 900; 
+  font-size: 1.6vw;
+}
+
+h4{
+  color: black;
+  text-align: center;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  font-size: 0.8vw;
+  font-weight: 300; 
+}
+
+
+img1{
+  grid-area: img1;
+  background-image: url("./images/glitch1.gif");
+  border-right-style: solid;
+  border-bottom-style: solid;
+  height: auto;
+  width: 100%;
+  z-index: 10;
+}
+
+img2{
+  grid-area: img2;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-top: solid;
+  height:fit-content;
+  overflow: hidden;
+  z-index: 10;
+}
+
+
+project{
+  grid-area: project;
+  background-color: white;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  overflow: auto;
+  z-index: 10;
+}
+
+
+quote{
+  grid-area: quote;
+  background-color: white;
+  border-left-style: solid;
+  overflow: auto;
+  z-index: 10;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+  
+  * {
+    overflow-y: scroll;
+  }
+
+  p {
+    padding-top: 1vh;
+    font-size: 2vw;
+    text-align: center;
+    }
+ 
+.marqueetermos{
+  animation: marquee 17s linear infinite;
+  position: fixed;
+  line-break: none;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+
+
+  .container{
+  grid-template-columns: 1fr ;
+  grid-template-rows: 6vh 8vh 20vh 70vh 70vh 30vh 55vh ;
+  grid-template-areas: 
+  "about"
+  "termos"
+  " definition"
+  " img1"
+  " project"
+  " quote"
+  "img2"
+  }
+
+  termos{
+    font-size: 4vw;
+    overflow: hidden;
+  }
+
+  h1{
+    position: relative;
+    width: 17vw;
+  }
+
+  h2{
+    padding-top: 2vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 0.8vw;
+    font-size: 2.4vw;
+  }
+  
+  h3{
+    padding-top: 2vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 2vw;
+    font-size: 3vw;
+  }
+
+  h4{
+    padding-top: 2vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 2vw;
+    font-size: 1.5vw;
+  }
+
+  h5{
+    padding-left: 0vw;
+    font-size: 3vw;
+  }
+
+quote{
+padding-bottom: solid;
+}
+
+
+}
+
+
+@media only screen and (max-width: 600px) {
+  
+  * {
+    overflow-y: scroll;
+  }
+
+  .container{
+    grid-template-columns: 1fr ;
+    grid-template-rows: 4vh 6vh 17vh 40vh 60vh 50vh 40vh  ;
+    grid-template-areas: 
+    "about"
+    "termos"
+    " definition"
+    " img1"
+    " project"
+    " quote"
+    "img2"
+   
+    }
+
+  h1{
+    width: 30vw;
+  }
+}
+
+
+
